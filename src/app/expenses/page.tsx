@@ -86,8 +86,11 @@ const ExpensesPageContent = () => {
             </div>
           </div>
           {/* Space for the Charts */}
-          <LineCharts />
-          <div className="grid gap-6 lg:grid-cols-2">
+          <div className="flex-row min-w-0 w-full">
+            <LineCharts />
+          </div>
+
+          <div className="grid gap-6 lg:grid-cols-2 min-w-0 w-full">
             <BarCharts />
             <PieCharts />
           </div>
