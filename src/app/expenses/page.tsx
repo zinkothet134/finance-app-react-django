@@ -3,6 +3,10 @@ import React, { Suspense } from "react";
 import Link from "next/link";
 import ExpensesEntryForm from "@/components/forms/expensesEntryForm";
 import { useSearchParams } from "next/navigation";
+import LineCharts from "@/components/charts/lineCharts";
+
+import PieCharts from "@/components/charts/pieCharts";
+import BarCharts from "@/components/charts/barCharts";
 
 const transactions = [
   {
@@ -81,6 +85,14 @@ const ExpensesPageContent = () => {
               <h3 className="mt-2 text-2xl font-bold text-blue-500">28</h3>
             </div>
           </div>
+          {/* Space for the Charts */}
+          <LineCharts />
+          <div className="grid gap-6 lg:grid-cols-2">
+            <BarCharts />
+            <PieCharts />
+          </div>
+
+          {/* Space for Charts */}
           <div className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-gray-100">
             <div className="mb-4 flex items-center justify-between">
               <h2 className="text-xl font-bold text-gray-900">
